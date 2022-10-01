@@ -2,6 +2,7 @@ package lt.kestutis.pom.pages.test.ikea;
 
 import lt.kestutis.pom.pages.ikea.IkeaBusinessPage;
 import lt.kestutis.pom.pages.ikea.IkeaHomePages;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -27,6 +28,9 @@ public class IkeaBusinessTest extends TestBase {
         String companyCode = "303401364";
         String telephoneNumber = "+37069851148";
 
+        String expectedMessage = "We will contact you soon ";
+        String actualMessage = "";
+
 
         IkeaBusinessPage.clickButtonPlaceTheOrder();
         IkeaBusinessPage.enterProductCode(productCode);
@@ -39,6 +43,17 @@ public class IkeaBusinessTest extends TestBase {
         IkeaBusinessPage.enterEmail(email);
         IkeaBusinessPage.enterCompanyCode(companyCode);
         IkeaBusinessPage.enterTelephoneNumber(telephoneNumber);
+
+        IkeaBusinessPage.clickTermsAndConditions();
+        IkeaBusinessPage.clickMarketingNewsletter();
+
+        IkeaBusinessPage.clickButtonAssembly();
+        IkeaBusinessPage.clickButtonDelivery();
+
+        IkeaBusinessPage.clickButtonSubmit();
+        IkeaBusinessPage.readRegistrationText();
+
+        Assert.assertEquals(actualMessage, expectedMessage);
 
         }
     }
