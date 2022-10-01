@@ -23,5 +23,14 @@ public class Locators {
         public static By inputCompanyCode = By.xpath("//*[@id=\"root\"]/div[6]/div[1]/div[6]/input");
         public static By inputTelephoneNumber = By.xpath("//*[@id=\"root\"]/div[6]/div[1]/div[7]/input");
 
+        public static By clickCheckBoxTermsAndConditions = By.xpath("//*[@id=\"agree_terms\"]");
+
+        public static By clickCheckBoxMarketing = By.xpath("//*[@id=\"agree_newsletter\"]");
+
+        public static By clickButtonAssemblyServices = By.xpath("//*[@id=\"services_required\"]");
+        public static By clickDeliveryOption = By.xpath("//*[@id=\"root\"]/div[6]/div[3]/div/select/option[2]");
+
+        public static By clickSubmit = By.xpath("//*[@id=\"root\"]/button");
+        public static By readRegistrationText = By.xpath("//*[@id=\"modal-container\"]/div/h2");
     }
 }
