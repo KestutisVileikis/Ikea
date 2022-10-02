@@ -12,4 +12,10 @@ public class IkeaHomePages {
                 Locators.IkeaHome.menuBusiness
         );
     }
+    public static void clickPlanningPage() {
+        Common.clickElementByAction(
+                Locators.IkeaHome.menuPlanning
+        );
+    }
+
 }
